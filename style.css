@@ -18,6 +18,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    border-radius: 10px;
     width: 100%;
     background-color: #6e6fc4; /* Ubah sesuai kebutuhan */
     z-index: 1000; /* Menentukan tingkat z-index agar tetap di atas konten */
