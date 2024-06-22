@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya untuk menyembunyikan semua section kecuali yang aktif */
+        section {
+            display: none;
+            padding-top: 80px; /* Menambahkan padding atas untuk memberikan ruang bagi header */
+        }
+        section.active {
+            display: block;
+        }
+        
+        /* Gaya untuk tautan navigasi */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+        nav ul li a.active {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        
+        /* Gaya untuk logo */
+        .logo {
+            max-width: 100px; /* Atur sesuai ukuran logo Anda */
+            height: auto;
+            margin-right: 10px; /* Atur margin logo dari tepi kanan */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\Administrator\Desktop\FANS PEDULI\FALEA.png" alt="Logo" class="logo"> <!-- Ganti path/to/your/logo.png dengan path logo Anda -->
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#complaint" onclick="showSection('complaint')">Pengaduan</a></li>
+                <li><a href="#social-media" onclick="showSection('social-media')">Sosial Media</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="active">
+       <h1>HAI KENALAN YUK!</h1>
+        <p>Halo Anak Palopo🙌🏻<br>
+            Kami dari Forum Anak Sawerigading hadir bersama dengan salah satu program kerja kami Yaitu FALEA (FANS Peduli OSCEA). FALEA merupakan program kerja yang dibuat dengan berkolaborasi dengan salah satu Duta Anak Kota Palopo tahun 2024 yaitu Brigita Mishela Mangkuali.<br><br>
+            
+            FALEA merupakan program kerja yang kami harap dapat menjadi wadah suara anak-anak Kota Palopo yang merupakan korban dari OSCEA yang nantinya FANS akan menjadi jembatan antara korban dengan Pemerintah Kota Palopo dalam menangani kasus tersebut. <br><br>
+            
+            Kalian dapat melaporkan kasus OSCEA melalui Form Pelapor yang telah kami siapkan di website ini, silahkan isi form tersebut dengan sebaik-baiknya yah anak palopo!!!🙌🏻<br><br>
+            
+            Dan jangan khawatir akan data pribadi kalian, karena data korban/pelapor akan kami lindungi sesuai dengan yang tercantum pada UU Nomor 27 Tahun 2022 yang membahas tentang perlindungan data pribadi. <br><br>
+            
+            Untuk informasi selanjutnya mengenai FALEA bisa kalian dapatkan melalui penjelasan di halaman berikutnya yaa!!!🤩<br><br>
+            
+            Tunggu apalagi Anak Palopo? <br><br>
+            Laporkan kasus kalian dan cegah OSCEA bersama dengan Forum Anak Sawerigading Kota Palopo‼️<br><br>
+        </p>
+    </section>
+
+    <section id="about">
+        <h1>APASIH OSCEA ITU?</h1>
+        <p>OSCEA adalah singkatan dari "Online Sexual and Child Exploitation and Abuse" atau Eksploitasi dan Penyalahgunaan Seksual dan Anak secara Online. Ini adalah sebuah masalah serius yang perlu mendapatkan perhatian dan penanganan secara serius.</p>
+    </section>
+
+    <section id="complaint">
+        <form method="post" autocomplete="off" name="google-sheet">
+            <h1>AYOO CERITA!!!</h1><br>
+            
+            <b>Korban / Pelapor :</b>
+            <select name="Korban/Pelapor" required="">
+                <option value="" disabled selected>Pilih</option>
+                <option value="Korban">Korban</option>
+                <option value="Pelapor">Pelapor</option>
+                <option value="Pelapor Dan Korban">Pelapor Dan Korban</option>
+            </select><br>
+
+            <b>Nama :</b>
+            <input type="text" name="Nama" required="" /><br>
+            <b>Usia :</b>
+            <select name="Usia" required="">
+                <option value="" disabled selected>Pilih Usia</option>
+                <option value="0 - 5 Tahun">0 - 5 Tahun</option>
+                <option value="6 - 10 Tahun">6 - 10 Tahun</option>
+                <option value="11 - 15 Tahun">11 - 15 Tahun</option>
+                <option value="16 - 18 Tahun">16 - 18 Tahun</option>
+            </select><br>
+            <b>Gender :</b>
+            <select name="Jenis Kelamin" required="">
+                <option value="" disabled selected>Pilih Gender</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select><br>
+            <b>Kecamatan :</b>
+            <select name="Kecamatan" required="">
+                <option value="" disabled selected>Pilih Kecamatan</option>
+                <option value="WARA">WARA</option>
+                <option value="WARA TIMUR">WARA TIMUR</option>
+                <option value="WARA BARAT">WARA BARAT</option>
+                <option value="WARA SELATAN">WARA SELATAN</option>
+                <option value="WARA UTARA">WARA UTARA</option>
+                <option value="SENDANA">SENDANA</option>
+                <option value="TELLUWANUA">TELLUWANUA</option>
+                <option value="MUNGKAJANG">MUNGKAJANG</option>
+                <option value="BARA">BARA</option>
+            </select><br>
+            <b>Ceritamu :</b>
+            <input type="text" name="Pengaduan" required="" /><br>
+            <input type="submit" name="submit" value="Submit"/>
+        </form>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzPD3cynT3LenJtPeJJrhqOUbWSdRG3RIyR1B5uQ6Ka6U_xzgKDXHJY-_hCr6tLglnY/exec';
+            const form = document.forms['google-sheet'];
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    console.log('Success!', response);
+                    alert("Kamu Keren Udah Berani Cerita.");
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert("Maaf, terjadi kesalahan saat mengirim data.");
+                });
+            });
+        </script>
+    </section>
+
+    <section id="social-media">
+        <h1>Sosial Media</h1>
+        <p>Ikuti kami di platform sosial media berikut:</p>
+        <ul>
+            <li><a href="https://www.instagram.com/fanspalopo/?igsh=a3VxaXo5eWZ2dnVh">Instagram</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FANS 24 Page. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(id) {
+            // Menghapus kelas 'active' dari semua section
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Menambahkan kelas 'active' ke section yang dipilih
+            document.getElementById(id).classList.add('active');
+
+            // Menambahkan kelas 'active' pada tautan navigasi yang sesuai
+            document.querySelectorAll('nav ul li a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + id) {
+                    a.classList.add('active');
+                }
+            });
+
+            // Scroll ke atas halaman ke bagian atas section yang dipilih
+            const yOffset = -80; // Sesuaikan dengan tinggi header Anda jika perlu
+            const element = document.getElementById(id);
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+            window.scrollTo({
+                top: y,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
+
