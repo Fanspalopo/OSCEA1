@@ -82,10 +82,8 @@
     
     <h2>Informasi Lebih Lanjut</h2>
     <p>Untuk informasi lebih lengkap, Anda dapat membaca dokumen PDF berikut:</p>
-    <iframe src="https://drive.google.com/file/d/1OzUa5kXFZBBso4jSfb7Finvwtb9H2nHg/view" width="100%" height="600px"></iframe>
+    <iframe src="https://fanspalopo.github.io/OSCEA1/oscea.pdf" width="100%" height="600px"></iframe>
 </section>
-
-    
 
     <section id="complaint">
         <form method="post" autocomplete="off" name="google-sheet">
@@ -170,28 +168,17 @@
                 section.classList.remove('active');
             });
 
-            // Menambahkan kelas 'active' ke section yang dipilih
+            // Menambahkan kelas 'active' ke section yang diinginkan
             document.getElementById(id).classList.add('active');
-
-            // Menambahkan kelas 'active' pada tautan navigasi yang sesuai
-            document.querySelectorAll('nav ul li a').forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href') === '#' + id) {
-                    a.classList.add('active');
-                }
+            
+            // Menghapus kelas 'active' dari semua tautan navigasi
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.classList.remove('active');
             });
 
-            // Scroll ke atas halaman ke bagian atas section yang dipilih
-            const yOffset = -80; // Sesuaikan dengan tinggi header Anda jika perlu
-            const element = document.getElementById(id);
-            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-            window.scrollTo({
-                top: y,
-                behavior: 'smooth'
-            });
+            // Menambahkan kelas 'active' ke tautan navigasi yang diklik
+            document.querySelector(`nav ul li a[href="#${id}"]`).classList.add('active');
         }
     </script>
 </body>
 </html>
-
