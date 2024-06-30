@@ -152,10 +152,10 @@ footer {
 #about iframe {
     display: block;
     margin: 20px auto;
-    width: 80%; /* Adjust the width to fit the layout */
-    max-width: 595px; /* Width of A4 */
-    height: 842px; /* Height of A4 */
+    width: 100%;
+    max-width: 100%; /* Adjust to fit the layout */
+    height: calc(100vw * 1.414); /* Maintain aspect ratio for A4 (width:height = 1:1.414) */
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 20px; /* Curved corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a better visual effect */
 }
