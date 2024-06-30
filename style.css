@@ -147,3 +147,15 @@ footer {
     margin-top: 2rem;
     font-size: 0.8rem;
 }
+
+/* Style for iframe in about section */
+#about iframe {
+    display: block;
+    margin: 20px auto;
+    width: 80%; /* Adjust the width to fit the layout */
+    max-width: 595px; /* Width of A4 */
+    height: 842px; /* Height of A4 */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a better visual effect */
+}
