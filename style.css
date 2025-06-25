@@ -159,3 +159,40 @@ footer {
     border-radius: 20px; /* Curved corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a better visual effect */
 }
+/* Style khusus untuk Ceritamu */
+#complaint form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    background-color: #f0f0f8;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+    min-height: 140px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+#complaint form textarea:focus {
+    border-color: #6e6fc4;
+    outline: none;
+}
+
+/* Style khusus untuk input Kontak / Nomor */
+#complaint form input[type="tel"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    background-color: #f7f7ff;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+#complaint form input[type="tel"]:focus {
+    border-color: #6e6fc4;
+    outline: none;
+}
