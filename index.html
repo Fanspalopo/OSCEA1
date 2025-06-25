@@ -85,37 +85,46 @@
        <iframe src="https://drive.google.com/file/d/1OzUa5kXFZBBso4jSfb7Finvwtb9H2nHg/preview" allow="autoplay"></iframe>
     </section>
 
-    <section id="complaint">
+    <section id="complaint" class="active">
+        <h1>💬 AYOO CERITA, KAMI SIAP MENDENGAR!</h1>
+        <p style="text-align: center; color: #555; font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px;">
+            Ceritamu penting dan berarti, kami ada untukmu. Yuk, isi formulir ini dengan jujur dan lengkap. 
+            Jangan takut, semua data akan kami jaga sesuai dengan Undang-Undang Perlindungan Data Pribadi 💖
+        </p>
+    
+        <div style="text-align: center; margin-bottom: 30px;">
+         
+    
         <form method="post" autocomplete="off" name="google-sheet">
-            <h1>AYOO CERITA!!!</h1><br>
-            
-            <b>Korban / Pelapor :</b>
-            <select name="Korban/Pelapor" required="">
+            <label>👤 Korban / Pelapor:</label>
+            <select name="KorbanPelapor" required>
                 <option value="" disabled selected>Pilih</option>
                 <option value="Korban">Korban</option>
                 <option value="Pelapor">Pelapor</option>
                 <option value="Pelapor Dan Korban">Pelapor Dan Korban</option>
-            </select><br>
-
-            <b>Nama :</b>
-            <input type="text" name="Nama" required="" /><br>
-
-            <b>Usia :</b>
-            <select name="Usia" required="">
+            </select>
+    
+            <label>📛 Nama:</label>
+            <input type="text" name="Nama" placeholder="Tulis namamu..." required>
+    
+            <label>🎂 Usia:</label>
+            <select name="Usia" required>
                 <option value="" disabled selected>Pilih Usia</option>
                 <option value="0 - 5 Tahun">0 - 5 Tahun</option>
                 <option value="6 - 10 Tahun">6 - 10 Tahun</option>
                 <option value="11 - 15 Tahun">11 - 15 Tahun</option>
                 <option value="16 - 18 Tahun">16 - 18 Tahun</option>
-            </select><br>
-            <b>Gender :</b>
-            <select name="Jenis Kelamin" required="">
+            </select>
+    
+            <label>🚻 Gender:</label>
+            <select name="JenisKelamin" required>
                 <option value="" disabled selected>Pilih Gender</option>
                 <option value="Laki-laki">Laki-laki</option>
                 <option value="Perempuan">Perempuan</option>
-            </select><br>
-            <b>Kecamatan :</b>
-            <select name="Kecamatan" required="">
+            </select>
+    
+            <label>📍 Kecamatan:</label>
+            <select name="Kecamatan" required>
                 <option value="" disabled selected>Pilih Kecamatan</option>
                 <option value="WARA">WARA</option>
                 <option value="WARA TIMUR">WARA TIMUR</option>
@@ -126,30 +135,35 @@
                 <option value="TELLUWANUA">TELLUWANUA</option>
                 <option value="MUNGKAJANG">MUNGKAJANG</option>
                 <option value="BARA">BARA</option>
-            </select><br>
-            <b>Ceritamu :</b>
-            <input type="text" name="Pengaduan" required="" /><br>
-                        <b>Kontak Yang Bisa Kami Hubungi :</b>
-            <input type="text" name="Nomor" required="" /><br>
-            <input type="submit" name="submit" value="Submit"/>
+            </select>
+    
+            <label>📝 Ceritamu:</label>
+            <textarea name="Pengaduan" rows="5" placeholder="Ceritakan apa yang kamu alami..." required></textarea>
+    
+            <label>📞 Kontak yang bisa kami hubungi:</label>
+            <input type="tel" name="Nomor" placeholder="0812xxxxxxx" required>
+    
+            <input type="submit" name="submit" value="💌 Kirim Cerita">
         </form>
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbyCKTE16MR2hf1Wz-8TmhMeexH8gI2WjpeFjd6iP6E/dev';
+    </section>
+    
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbw-5AQidcRMNzoxVnsD3PHwuKx0vvyhV8rX_2CR9wPFLh7FgCNc5jRbTTiA2CnJ6Z6W/exec';
             const form = document.forms['google-sheet'];
+          
             form.addEventListener('submit', e => {
-                e.preventDefault();
-                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              e.preventDefault();
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
-                    console.log('Success!', response);
-                    alert("Kamu Keren Udah Berani Cerita.");
-                    form.reset();
+                  alert("Kamu keren sudah berani cerita!");
+                  form.reset();
                 })
                 .catch(error => {
-                    console.error('Error!', error.message);
-                    alert("Maaf, terjadi kesalahan saat mengirim data.");
+                  alert("Terjadi kesalahan. Coba lagi nanti ya.");
+                  console.error('Error!', error.message);
                 });
             });
-        </script>
+          </script>
     </section>
 
     <section id="social-media">
